@@ -10,4 +10,4 @@ spec:
       targetPort: {{ .Values.orders.containerPort }}
       protocol: TCP
   selector:
-    name: {{ .Values.orders.name }}
+    app: {{ .Values.orders.name }}

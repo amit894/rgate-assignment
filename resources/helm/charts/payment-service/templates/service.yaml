@@ -10,4 +10,4 @@ spec:
       targetPort: {{ .Values.payments.containerPort }}
       protocol: TCP
   selector:
-    name: {{ .Values.payments.name }}
+    app: {{ .Values.payments.name }}

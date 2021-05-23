@@ -45,7 +45,6 @@ orders:
   type: ClusterIP
   containerPort: 80
   servicePort: 80
-  name: orders
   ImageName: "amit894/order:1.0.0"
   replicas: 1
 

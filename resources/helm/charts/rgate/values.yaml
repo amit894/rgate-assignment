@@ -44,9 +44,9 @@ securityContext: {}
 rgate:
   name: rgate
   backend1:
-    name: orders
-  backend2:
     name: payments
+  backend2:
+    name: orders
 
 ingress:
   enabled: true
