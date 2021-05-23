@@ -15,11 +15,11 @@ spec:
               service:
                 name: {{ .Values.rgate.backend1.name }}
                 port:
-                  number: 80
+                  number: 8080
           - path: /api/orders/
             pathType: Prefix
             backend:
               service:
                 name: {{ .Values.rgate.backend2.name }}
                 port:
-                  number: 80
+                  number: 8080

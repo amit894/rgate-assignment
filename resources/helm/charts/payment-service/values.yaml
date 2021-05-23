@@ -44,7 +44,7 @@ payments:
   name: payments
   type: ClusterIP
   containerPort: 80
-  servicePort: 80
+  servicePort: 8080
   ImageName: "amit894/payments:1.0.0"
   replicas: 1
 

@@ -1,12 +1,6 @@
 import os
-import Jinja2
+import yaml
 
-def excute_rgate(args):
-    create_charts("../config.yaml")
-    run_charts()
+def excute_rgate():
 
-def create_charts(config):
-    print(config)
-
-def run_charts(config):
-    print(config)
+excute_rgate()
