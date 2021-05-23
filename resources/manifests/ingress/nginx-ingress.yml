@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: rgate-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+spec:
+  rules:
+    - host: rgate
+      http:
+        paths:
+          - path: /payments
+            pathType: Prefix
+            backend:
+              service:
+                name: payments
+                port:
+                  number: 80
+          - path: /order
+            pathType: Prefix
+            backend:
+              service:
+                name: order
+                port:
+                  number: 8080
