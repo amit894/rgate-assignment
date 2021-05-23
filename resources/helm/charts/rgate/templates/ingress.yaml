@@ -13,6 +13,13 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: {{ .Values.orders.name }}
+                name: {{ .Values.rgate.backend1.name }}
                 port:
-                  number: {{ .Values.orders.servicePort }}
+                  number: 80
+          - path: /api/payments(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ .Values.rgate.backend2.name }}
+                port:
+                  number: 80
