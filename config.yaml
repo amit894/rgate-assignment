@@ -1,0 +1,19 @@
+routes:
+  - path_prefix: /api/recieve
+    backend: recieve
+  - path_prefix: /api/buy
+    backend: buy
+
+default_response:
+  body: “This is not reachable”
+  status_code: 403
+
+backends:
+  - name: recieve
+    match_labels:
+      - app_name=recieve
+      - env=production
+  - name: buy
+    match_labels:
+      - app_name=buy
+      - env=production
