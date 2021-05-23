@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: order
-        image: amit894/order:latest
+        image: amit894/order:1.0.0
         ports:
         - containerPort: 80
