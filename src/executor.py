@@ -17,4 +17,4 @@ class Executor:
             os.system("helm uninstall "+chart)
 
 E1=Executor()
-E1.stop_rgate()
+E1.run_rgate()
