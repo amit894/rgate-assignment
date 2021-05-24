@@ -20,23 +20,23 @@ Create the aliases for deployment,running and stopping rgate. RGate has a bug wi
 
 ## Steps for running RGate
 
-Deploying RGate :
+### Deploying RGate :
 
 - `cd src`
 -  `rgate-deploy`
 
-Running RGate :
+### Running RGate :
 
 - `cd src`
 -  `rgate-deploy`
 
-Stopping RGate :
+### Stopping RGate :
 
 - `cd src`
 -  `rgate-delete`
 
 
-Validating RGate :
+### Validating RGate :
 
 Without making Changes to hosts file
 
