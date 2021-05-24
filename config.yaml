@@ -3,6 +3,10 @@ routes:
     backend: recieve
   - path_prefix: /api/buy
     backend: buy
+  - path_prefix: /api/payments
+    backend: payments
+  - path_prefix: /api/orders
+    backend: orders
 
 default_response:
   body: “This is not reachable”
@@ -16,4 +20,12 @@ backends:
   - name: buy
     match_labels:
       - app_name=buy
+      - env=production
+  - name: payments
+    match_labels:
+      - app_name=payments
+      - env=production
+  - name: orders
+    match_labels:
+      - app_name=orders
       - env=production
