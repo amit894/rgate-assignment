@@ -44,7 +44,9 @@ class Deployer:
         ingress_master_dict["spec"]["rules"][0]["http"]["paths"]=route_list
         yaml.dump(ingress_master_dict,ingress_file)
         ingress_file.close()
+        os.system("cd "+ self.helm_path+" && helm create rgate")
         os.system("cp -f "+ self.template_path+"ingress/ingress.yaml " + self.helm_path+ "rgate/templates")
+        os.system("cp -f " + self.template_path+"ingress/values.yaml " +self.helm_path+"rgate")
 
 
     def create_service(self,backends):
